@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "davinci-printer-utils"
+version = "0.1.0"
+description = "A toolbox for XYZprinting da Vinci 1.0 series 3D printers."
+authors = ["hyx0329 <hyx0329@163.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "davinci_printer_utils"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyserial = "^3.5"
+colorama = "^0.4.5"
+click = "^8.1.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
