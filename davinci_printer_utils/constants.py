@@ -40,30 +40,33 @@ GCODE_TRUNK_SIZE = 10236  # the checksum takes 4 bytes, total 10240 bytes
 SERIAL_BAUDRATE = 115200
 MODEL_NUMBER = "daVinciF10"
 
+FILAMENT_ID = {
+    'ABS': 41,
+    'TPE': 46,
+    'FLEX': 46,
+    'PETG': 47,
+    'PLA': 50,
+    'PLA_ANOTHER': 51,
+    'PLA_TOUGH': 54,
+    'PVA': 56,
+}
+
 # Formated text
 GCODE_TRANSFER_HEAD = "M1:MyTest,{length},{h}.{m}.{s},EE1_OK,EE2_OK"
+
 # header for one extruder model
 GCODE_HEADER = """; filename = Task.3w
 ; print_time = {print_time}
 ; machine = {model_number}
 ; total_layers = {layer_count}
-; version = 15062609
 ; total_filament = {filament_length:.2f}
 ; nozzle_diameter = {nozzle_diameter:.2f}
 ; layer_height = {layer_height:.2f}
-; support_material = 0
-; support_material_extruder = 1
 ; extruder_filament = {filament_length:.2f}:0.00
 ; extruder = 1
-; filamentid = 41,41,
+; filamentid = {filament_id},{filament_id},
+; material = {filament_name}
 ; materialid = 0,
-; fill_density = 0.10
-; raft_layers = 0
-; support_density = 0.20
-; shells = 2
-; speed = 45
-; brim_width = 0
-; dimension = 10.00:10.00:9.95
 """
 
 
